@@ -30,8 +30,8 @@
 5. Exceute the codes from IDE (VS code):
     ```shell
     cd python_utility
-    python .\src\python_utility\gcp\bigquery\bigquery_schema.py
-    python .\src\python_utility\generic\datetime\generate_date_dimention.py
+    python .\src\easycloudapi\gcp\bigquery\bigquery_schema.py
+    python .\src\easycloudapi\generic\datetime\generate_date_dimention.py
     ```
 
 6. Configure to build the package locally:
@@ -43,14 +43,14 @@
 7. locally install the package for testing (run from root dir where setup.py or setup.cfg available):
     ```shell
     pip install -e .
-    pip uninstall python_utility
+    pip uninstall easycloudapi
     ```
 
 8. install twine which will copy the code to testpypi and pypi:
     ```shell
     py -m pip install --upgrade twine  # will upload distribution archive into testpypi or pypi
 
-    # testPyPi - https://test.pypi.org/project/python-utility/1.0.0/
+    # testPyPi - https://test.pypi.org/project/easycloudapi/0.0.1/
     # create testpypi account (https://test.pypi.org/), activate testPyPi account, 
     # create api token, store it under ".pypirc" as documented or generated.
     cd $Home
@@ -61,9 +61,10 @@
     # or 
     py -m twine upload --skip-existing --repository testpypi dist/*
 
-    # PyPi - 
+    # PyPi - https://pypi.org/project/easycloudapi/0.0.1/
     # create pypi account (https://pypi.org/), activate PyPi account, 
     # create api token, store it under ".pypirc" as documented or generated.
 
     # upload the package from local dist to PyPi
+    twine upload dist/*  # --repository pypi 
     ```

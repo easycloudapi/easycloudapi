@@ -1,16 +1,17 @@
-# `python_utility`
-The `python_utility` is a simple uitility to provide ease of developing experience for any Python Applications.
+# easycloudapi
+The `easycloudapi` is a simple uitility to provide ease of developing experience for any Python Applications.
 
 
-## Info:
-1. Version: 1.0.0
+## Functionality Availaible:
+1. Generate Date Dimension
+2. Generate Bigquery Schema from Json
 
 ## Code Samples:
 
 ### Generate Bigquery Schema-
 1. You can directly pass json/dict object to the `generate_bq_schema` method
     ```python
-    from python_utility.gcp.bigquery.bigquery_schema import BigquerySchema
+    from easycloudapi.gcp.bigquery.bigquery_schema import BigquerySchema
 
     sample_json = {
         "name": "Danilo",
@@ -34,7 +35,7 @@ The `python_utility` is a simple uitility to provide ease of developing experien
 2. You can also convert the json file into json/dict object and pass to the `generate_bq_schema` method
     ```python
     import json
-    from python_utility.gcp.bigquery.bigquery_schema import BigquerySchema
+    from easycloudapi.gcp.bigquery.bigquery_schema import BigquerySchema
 
 
     bq_schema_obj = BigquerySchema()
@@ -48,7 +49,7 @@ The `python_utility` is a simple uitility to provide ease of developing experien
 ### Date Functionality-
 1. Generate Date Dimension
     ```python
-    from python_utility.generic.datetime.generate_date_dimention import generate_date_dimension
+    from easycloudapi.generic.datetime.generate_date_dimention import generate_date_dimension
 
     out1 = generate_date_dimension(start_date="2023\\08\\01", end_date="2023\\08\\03")
     print(f"out1: {out1}")

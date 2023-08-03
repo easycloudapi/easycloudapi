@@ -1,5 +1,5 @@
 import json
-from python_utility.generic.datetime.generate_date_dimention import generate_date_dimension
+from easycloudapi.generic.datetime.generate_date_dimention import generate_date_dimension
 
 
 out1 = generate_date_dimension(start_date="2023\\08\\01", end_date="2023\\08\\03")
