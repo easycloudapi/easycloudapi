@@ -1,0 +1,12 @@
+{
+    "name": "Danilo",
+    "age": 32,
+    "date_joined": "2020-11-05",
+    "location": {"country": "United Kingdom", "city": "London"},
+    "years_active": [2020, 2021, 2022],
+    "favourite_movies": [
+        {"name": "Momento", "year": "2000"},
+        {"name": "Se7en", "year": "1995"},
+        {"name": "Momento", "year": "2000"}
+    ]
+}
