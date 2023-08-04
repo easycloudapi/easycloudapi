@@ -53,13 +53,15 @@ The `easycloudapi` is a simple uitility to provide ease of developing experience
 
     out1 = generate_date_dimension(start_date="2023\\08\\01", end_date="2023\\08\\03")
     print(f"out1: {out1}")
+
     out2 = generate_date_dimension(start_date="2023/08/01", end_date="2023/08/03")
     print(f"out2: {out2}")
+
     out3 = generate_date_dimension(start_date="2023-08-01", end_date="2023-08-03")
     print(f"out3: {out3}")
     ```
 
 ## How to Contribute
-1. Refer to [Developer Guide](developer.md)
+1. Refer to [Developer Guide](developer_guide.md)
 
 
