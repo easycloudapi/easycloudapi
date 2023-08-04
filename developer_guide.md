@@ -25,9 +25,9 @@
     1. Python
     2. SQL
     3. Git
-    4. Google Cloud Project (optional)
-    5. Azure Cloud (optional)
-    6. Amazon Web Service (optional)
+    4. Google Cloud Project (*optional*)
+    5. Azure Cloud (*optional*)
+    6. Amazon Web Service (*optional*)
 
 
 ## Steps to follow in windows machine:
@@ -94,4 +94,18 @@
 
     # upload the package from local dist to PyPi
     twine upload dist/*  # --repository pypi 
+    ```
+
+9. Setup ReadtheDocs Setup:
+    ```shell
+    pip install sphinx
+
+    cd docs
+    sphinx-quickstart  # follow instruction as per cli guide
+    .\make html
+
+    cd build/html
+    explorer index.html
+    # or
+    explorer .\build\html\index.html
     ```
