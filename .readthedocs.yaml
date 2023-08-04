@@ -11,8 +11,8 @@ build:
   tools:
     python: "3.10.5"
       install:
-      - method: pip
-        path: .
+        - method: pip
+          path: .
     # You can also specify other tool versions:
     # nodejs: "19"
     # rust: "1.64"
