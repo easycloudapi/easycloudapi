@@ -5,7 +5,30 @@
 1. How to create python package:
     1. https://www.freecodecamp.org/news/how-to-create-and-upload-your-first-python-package-to-pypi/
     2. setup.cfg documents: https://setuptools.pypa.io/en/latest/userguide/declarative_config.html
-    
+2. ReadTheDocs Documentation:
+    1. https://docs.readthedocs.io/en/stable/tutorial/index.html
+    2. sphinx: https://sphinx-tutorial.readthedocs.io/
+    3. https://docs.readthedocs.io/en/stable/config-file/v2.html
+    4. https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx.builders.html.DirectoryHTMLBuilder
+
+
+## Pre-requisite:
+1. Account Setup:
+    1. Github Account - https://github.com
+    2. TestPypi Account setup - https://test.pypi.org
+    3. Pypi Account Setup - https://pypi.org
+    4. ReadTheDocs Account Setup - https://readthedocs.org/accounts/signup/
+2. Softwares/Tools in your machine:
+    1. setup ".pypirc" file inside $Home folder 
+    2. VS code
+3. Knowledge:
+    1. Python
+    2. SQL
+    3. Git
+    4. Google Cloud Project (optional)
+    5. Azure Cloud (optional)
+    6. Amazon Web Service (optional)
+
 
 ## Steps to follow in windows machine:
 1. Create and Activate Python Virtual Environment
@@ -20,6 +43,10 @@
     get-ExecutionPolicy
     Set-ExecutionPolicy Unrestricted -Scope Process  # if its restricted, then execute this command
     ```
+4. Git clone the repository
+    ```shell
+    git clone https://github.com/easycloudapi/python_utility.git
+    ```
 
 4. Install the python dependencies
     ```shell
@@ -30,8 +57,8 @@
 5. Exceute the codes from IDE (VS code):
     ```shell
     cd python_utility
-    python .\src\python_utility\gcp\bigquery\bigquery_schema.py
-    python .\src\python_utility\generic\datetime\generate_date_dimention.py
+    python .\src\easycloudapi\gcp\bigquery\bigquery_schema.py
+    python .\src\easycloudapi\generic\datetime\generate_date_dimention.py
     ```
 
 6. Configure to build the package locally:
@@ -40,17 +67,17 @@
     py -m build  # will create the dist folder with source archive & built archive
     ```
 
-7. locally install the package for testing (run from root dir where setup.py or setup.cfg available):
+7. Locally install the package for testing (run from root dir where setup.py or setup.cfg available):
     ```shell
     pip install -e .
-    pip uninstall python_utility
+    pip uninstall easycloudapi
     ```
 
-8. install twine which will copy the code to testpypi and pypi:
+8. Install twine which will copy the code to `testpypi` and `pypi`:
     ```shell
     py -m pip install --upgrade twine  # will upload distribution archive into testpypi or pypi
 
-    # testPyPi - https://test.pypi.org/project/python-utility/1.0.0/
+    # testPyPi - https://test.pypi.org/project/easycloudapi/0.0.1/
     # create testpypi account (https://test.pypi.org/), activate testPyPi account, 
     # create api token, store it under ".pypirc" as documented or generated.
     cd $Home
@@ -61,9 +88,10 @@
     # or 
     py -m twine upload --skip-existing --repository testpypi dist/*
 
-    # PyPi - 
+    # PyPi - https://pypi.org/project/easycloudapi/0.0.1/
     # create pypi account (https://pypi.org/), activate PyPi account, 
     # create api token, store it under ".pypirc" as documented or generated.
 
     # upload the package from local dist to PyPi
+    twine upload dist/*  # --repository pypi 
     ```
