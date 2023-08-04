@@ -102,10 +102,17 @@
 
     cd docs
     sphinx-quickstart  # follow instruction as per cli guide
+
+    # will create html files inside build/html
     .\make html
 
+    # test the html file
     cd build/html
     explorer index.html
     # or
     explorer .\build\html\index.html
+
+    # to remove everything from build
+    cd docs
+    .\make clean  
     ```
