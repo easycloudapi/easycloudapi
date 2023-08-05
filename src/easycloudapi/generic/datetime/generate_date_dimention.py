@@ -1,11 +1,31 @@
+"""
+Generate Date Dimension
+-----------------------
+
+This module to generate the date dimension
+
+"""
+
 import pandas as pd
 from datetime import datetime as dt
 from datetime import timedelta
 from datetime import date
 
 
-def generate_date_dimension(start_date: str = "", end_date: str = ""):
+def generate_date_dimension(start_date: str = "", 
+                            end_date: str = "") -> pd.core.frame.DataFrame:
+    """
+    Function: Generate Date Dimension
 
+    :param
+    ------ 
+        start_date: str (default: 1 week before date) 
+        end_date: str (default: 1 week after date) 
+
+    :return
+    -------
+        pandas.core.frame.DataFrame object
+    """
     start_date = start_date.replace("/", "-").replace("\\", "-")
     end_date = end_date.replace("/", "-").replace("\\", "-")
 

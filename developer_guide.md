@@ -114,5 +114,22 @@
 
     # to remove everything from build
     cd docs
-    .\make clean  
+    .\make clean
+
+    # install sphinx apidoc and theme 
+    cd .\python_utility
+    pip install sphinxcontrib-apidoc sphinx_rtd_theme
+    
+    # will create module level rst files
+    cd .\python_utility
+    sphinx-apidoc -o .\docs\source\ .\src\easycloudapi\
+
+    cd docs
+    .\make clean html
+    # add src.<module> inside all newly created .rst files
+
+    # regular commands
+    .\make clean html
+    .\make html
+    explorer .\build\html\index.html
     ```

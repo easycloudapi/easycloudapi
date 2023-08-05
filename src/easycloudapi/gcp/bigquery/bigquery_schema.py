@@ -1,18 +1,63 @@
+"""
+Generate Bigquery Schema
+-------------------------
+This module to generate the Google Bigquery Schema
+
+    # Creating a JSON schema file
+    # Ref: https://cloud.google.com/bigquery/docs/schemas#creating_a_JSON_schema_file
+    # test:
+    # 1. https://transform.tools/json-to-big-query
+    # 2. https://bigquery-json-schema-generator.com/
+
+"""
 import json
 
-# Creating a JSON schema file
-# Ref: https://cloud.google.com/bigquery/docs/schemas#creating_a_JSON_schema_file
-# test:
-# 1. https://transform.tools/json-to-big-query
-# 2. https://bigquery-json-schema-generator.com/
 
+class BigquerySchema(object):
+    """
+    A class to generate Bigquery Schema
+    ...
 
-class BigquerySchema:
-    # get generic bq coloum schema
+    :Attributes
+    -----------
+        col_name: str
+            Bigquery Column Name
+        col_type: str (default: "STRING")
+            Bigquery Column Type 
+        Column Type can be any one of ["STRING", "INTEGER", "DATE", "DATETIME", "record"]
+            col_mode: str (default: "NULLABLE")
+        Bigquery Column Mode 
+            Column Mode can be one of ["NULLABLE", "repeated"]
+
+    :Static Methods
+    ---------------
+        _get_generic_coloum_schema(col_name=<col_name>, col_type="STRING", col_mode="NULLABLE"):
+            Generate Bigquery generic column schema
+
+        generate_bq_schema(data=<json_data>):
+            Generate Bigquery whole column schema
+            
+    """
     @staticmethod
-    def _get_generic_coloum_schema(col_name: str, col_type="STRING", col_mode="NULLABLE"):
+    def _get_generic_coloum_schema(col_name: str, 
+                                   col_type: str = "STRING", 
+                                   col_mode: str = "NULLABLE"
+                                   ) -> dict:
         """
-        generic bigquery column schema
+        Generate Bigquery generic column schema
+
+        This method is for internal functionality. 
+
+        :param
+        ------ 
+            col_name: str 
+            col_type: str (default: "STRING") 
+            col_mode: str (default: "NULLABLE")
+
+        :return
+        -------
+            generic bigquery column schema, list obj
+
         """
         generic_coloum_schema = {}
         generic_coloum_schema["name"] = col_name
@@ -22,11 +67,20 @@ class BigquerySchema:
         # generic_coloum_schema["description"] = "_" + col_name
         return generic_coloum_schema
 
-    # generate bigquery schema
+
     @staticmethod
-    def generate_bq_schema(data: dict):
+    def generate_bq_schema(data: dict) -> list:
         """
-        generate bigquery schema
+        Generate Bigquery whole schema
+        
+        :param
+        ------ 
+            data: dict 
+
+        :return
+        -------
+            bigquery column schema as a list object
+        
         """
         out_schema = []
         for i, j in data.items():

@@ -3,6 +3,13 @@ Need Help:
 
 If you are in any trouble, please email indra.tutun@gmail.com
 
+
+Need to discuss on Forum:
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Please visit to [https://github.com/easycloudapi/python_utility/discussions]
+
+
 Need to raise Issue:
 ^^^^^^^^^^^^^^^^^^^^
 
