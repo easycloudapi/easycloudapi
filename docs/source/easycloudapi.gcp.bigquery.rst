@@ -12,10 +12,3 @@ easycloudapi.gcp.bigquery.bigquery\_schema module
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: src.easycloudapi.gcp.bigquery
-   :members:
-   :undoc-members:
-   :show-inheritance:

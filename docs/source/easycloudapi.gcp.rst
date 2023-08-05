@@ -9,10 +9,3 @@ Subpackages
 
    easycloudapi.gcp.bigquery
 
-Module contents
----------------
-
-.. automodule:: src.easycloudapi.gcp
-   :members:
-   :undoc-members:
-   :show-inheritance:

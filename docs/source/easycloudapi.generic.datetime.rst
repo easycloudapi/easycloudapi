@@ -12,10 +12,3 @@ easycloudapi.generic.datetime.generate\_date\_dimention module
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: src.easycloudapi.generic.datetime
-   :members:
-   :undoc-members:
-   :show-inheritance:

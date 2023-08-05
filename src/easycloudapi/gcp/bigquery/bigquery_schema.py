@@ -3,11 +3,11 @@ Generate Bigquery Schema
 -------------------------
 This module to generate the Google Bigquery Schema
 
-    # Creating a JSON schema file
-    # Ref: https://cloud.google.com/bigquery/docs/schemas#creating_a_JSON_schema_file
-    # test:
-    # 1. https://transform.tools/json-to-big-query
-    # 2. https://bigquery-json-schema-generator.com/
+#. Creating a JSON schema file
+    #. Ref: https://cloud.google.com/bigquery/docs/schemas#creating_a_JSON_schema_file
+#. test:
+    #. 1. https://transform.tools/json-to-big-query
+    #. 2. https://bigquery-json-schema-generator.com/
 
 """
 import json
@@ -18,24 +18,14 @@ class BigquerySchema(object):
     A class to generate Bigquery Schema
     ...
 
-    :Attributes
-    -----------
-        col_name: str
-            Bigquery Column Name
-        col_type: str (default: "STRING")
-            Bigquery Column Type 
-        Column Type can be any one of ["STRING", "INTEGER", "DATE", "DATETIME", "record"]
-            col_mode: str (default: "NULLABLE")
-        Bigquery Column Mode 
-            Column Mode can be one of ["NULLABLE", "repeated"]
+    Parameters
+    ----------
+    No Params
 
-    :Static Methods
-    ---------------
-        _get_generic_coloum_schema(col_name=<col_name>, col_type="STRING", col_mode="NULLABLE"):
-            Generate Bigquery generic column schema
-
-        generate_bq_schema(data=<json_data>):
-            Generate Bigquery whole column schema
+    Methods
+    -------
+    generate_bq_schema(data=<json_data>):
+        Generate Bigquery whole column schema
             
     """
     @staticmethod
@@ -48,14 +38,20 @@ class BigquerySchema(object):
 
         This method is for internal functionality. 
 
-        :param
-        ------ 
-            col_name: str 
-            col_type: str (default: "STRING") 
-            col_mode: str (default: "NULLABLE")
+        Parameters
+        ----------
+        col_name: str
+            Bigquery Column Name
+        col_type: str (default: "STRING")
+            Bigquery Column Type
+            Column Type can be any one of ["STRING", "INTEGER", "DATE", "DATETIME", "record"]
+        col_mode: str (default: "NULLABLE")
+            Bigquery Column Mode
+            Column Mode can be one of ["NULLABLE", "repeated"]
 
-        :return
+        Returns
         -------
+        generic_coloum_schema
             generic bigquery column schema, list obj
 
         """
@@ -73,14 +69,16 @@ class BigquerySchema(object):
         """
         Generate Bigquery whole schema
         
-        :param
-        ------ 
-            data: dict 
+        Parameters
+        ---------- 
+        data: dict
+            Provide Json Data
 
-        :return
+        Returns
         -------
+        out_schema
             bigquery column schema as a list object
-        
+
         """
         out_schema = []
         for i, j in data.items():

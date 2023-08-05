@@ -9,10 +9,3 @@ Subpackages
 
    easycloudapi.generic.datetime
 
-Module contents
----------------
-
-.. automodule:: src.easycloudapi.generic
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -10,6 +10,7 @@
     2. sphinx: https://sphinx-tutorial.readthedocs.io/
     3. https://docs.readthedocs.io/en/stable/config-file/v2.html
     4. https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx.builders.html.DirectoryHTMLBuilder
+    5. Cheat sheet: https://sphinx-tutorial.readthedocs.io/cheatsheet/
 
 
 ## Pre-requisite:
