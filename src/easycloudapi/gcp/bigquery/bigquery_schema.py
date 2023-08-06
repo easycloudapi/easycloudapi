@@ -6,8 +6,8 @@ This module to generate the Google Bigquery Schema
 #. Creating a JSON schema file
     #. Ref: https://cloud.google.com/bigquery/docs/schemas#creating_a_JSON_schema_file
 #. test:
-    #. 1. https://transform.tools/json-to-big-query
-    #. 2. https://bigquery-json-schema-generator.com/
+    #. https://transform.tools/json-to-big-query
+    #. https://bigquery-json-schema-generator.com/
 
 """
 import json
