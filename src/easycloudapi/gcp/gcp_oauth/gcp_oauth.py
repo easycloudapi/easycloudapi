@@ -12,7 +12,7 @@ How to access GCP projects using best auth
     #. https://google-auth.readthedocs.io/en/stable/user-guide.html
 
 Different Ways/Methods To Access GCP Cloud Resources:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. With User Consent
 
 #. By Service Account Json Key
@@ -37,14 +37,10 @@ class GCP_Authentication(object):
     A class for GCP Authentication
     ...
 
-    Parameters
-    ----------
+    Attributes:
+    -----------
     project_id: str
         Google Project ID
-
-    Methods
-    -------
-    oauth_withUserConsent_googleURI()
 
     """
     def __init__(self, 
