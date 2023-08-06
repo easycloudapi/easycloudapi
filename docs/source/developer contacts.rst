@@ -9,12 +9,13 @@ Indranil Pal (Primary Contributor):
     I am from Kolkata. I am very much foodie, 
 
     Please checkout below links as well-
+    ************************************
     
-    easycloudapi-api site: https://www.easycloudapi.com
-        Bitbucket Repo: https://bitbucket.org/easycloudapi/test_easycloudapi/
+    #. easycloudapi-api site: https://www.easycloudapi.com
+        #. Bitbucket Repo: https://bitbucket.org/easycloudapi/test_easycloudapi/
 
-    easycloudapi-python-utility PyPi: https://pypi.org/project/easycloudapi/ 
-        Github Repo: https://github.com/easycloudapi/python_utility
-        ReadTheDocs Documentation: https://easycloudapi-python-utility.readthedocs.io/en/latest/
+    #. easycloudapi-python-utility PyPi: https://pypi.org/project/easycloudapi/ 
+        #. Github Repo: https://github.com/easycloudapi/python_utility
+        #. ReadTheDocs Documentation: https://easycloudapi-python-utility.readthedocs.io/en/latest/
      
     Currently I am looking for Other Contributors as well.
