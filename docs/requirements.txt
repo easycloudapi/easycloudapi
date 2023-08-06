@@ -1,3 +1,8 @@
+pandas==2.0.2
+numpy==1.25.2
+google-auth==2.22.0 
+google-auth-oauthlib==1.0.0
+google-api-python-client==2.95.0
 sphinx==6.2.1
 sphinxcontrib-apidoc==0.3.0
 sphinx_rtd_theme==1.2.2

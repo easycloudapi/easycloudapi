@@ -1,7 +1,6 @@
 """
 GCP Authentication
 ------------------
-
 How to access GCP projects using best auth
 
 #. Reference:
@@ -14,15 +13,11 @@ How to access GCP projects using best auth
 Different Ways/Methods To Access GCP Cloud Resources:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. With User Consent
-
 #. By Service Account Json Key
-
 #. By Default Access if application running on GCP ComputeEngine, CloudFunction, CloudRun, AppEngine, Kubernetes
-
 #. With impersonate Service Account
 
 """
-
 import os
 import sys
 from google_auth_oauthlib.flow import Flow  # InstalledAppFlow
@@ -37,11 +32,17 @@ class GCP_Authentication(object):
     A class for GCP Authentication
     ...
 
-    Attributes:
-    -----------
+    Parameters
+    ----------
     project_id: str
         Google Project ID
 
+    Methods
+    -------
+    oauth_withUserConsent_googleURI(client_secret_file_path,
+                                    scopes)
+        Oauth method using user consent
+     
     """
     def __init__(self, 
                  project_id: str) -> None:
@@ -70,8 +71,8 @@ class GCP_Authentication(object):
         Returns
         -------
         credentials: google.oauth2.credentials.Credentials
-
-
+            return credential object
+        
         Notes
         -----
         #. To Create Client Access Secret and TokenID follow below steps:
