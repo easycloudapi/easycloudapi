@@ -1,14 +1,14 @@
 Welcome to EasyCloudApi Python Utility's documentation!
 =======================================================
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
    modules
 
 .. include:: easycloudapi.rst 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
    developer contacts
    help
