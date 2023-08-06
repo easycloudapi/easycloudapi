@@ -5,7 +5,8 @@ Subpackages
 -----------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
    easycloudapi.gcp.bigquery
+   easycloudapi.gcp.gcp_oauth
 
