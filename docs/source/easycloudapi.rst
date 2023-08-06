@@ -5,8 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
 
    easycloudapi.gcp
    easycloudapi.generic
-
